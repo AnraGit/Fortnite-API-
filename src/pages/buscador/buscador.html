@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Daily store items</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <ion-card *ngFor="let items of shop">
+    <img src="{{items.item.images.background}}" />
+    <ion-card-content>
+      <ion-title style="text-align: center">
+        {{items.name}}
+      </ion-title>
+      <p style="text-align: center">
+        v-bucks: {{items.cost}}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <p>
+          
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+

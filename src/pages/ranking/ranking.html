@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Current season challenges
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg" >
+  
+  <ion-card *ngFor="let weekchall of challenges" >
+
+      <ion-title style="text-align: center">
+          {{weekchall.week}}
+      </ion-title>
+     
+    <ion-card-content *ngFor="let challenge of weekchall.challenges">
+      
+      <ion-row no-padding>
+        <ion-col>
+          <p>
+            {{challenge.challenge}}
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col>
+          <p>
+            Total: {{challenge.total}}
+          </p>
+          <p>
+           Stars: {{challenge.stars}}
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row no-padding>
+        <ion-col>
+          <p>
+            Difficulty: {{challenge.difficulty}}
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+

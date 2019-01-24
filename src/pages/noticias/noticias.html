@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Latest News
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <ion-card *ngFor="let new of news">
+    <img src="{{new.image}}" />
+    <ion-card-content>
+      <ion-title>
+        {{new.title}}
+      </ion-title>
+      <p>
+        {{new.body}}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <p>
+          {{new.time}}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
